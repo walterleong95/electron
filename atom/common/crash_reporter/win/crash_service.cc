@@ -470,7 +470,7 @@ DWORD CrashService::AsyncSendDump(void* context) {
   } while (retry_round >= 0);
 
   if (!::DeleteFileW(info->dump_path.c_str()))
-    LOG(WARNING) << "could not delete " << info->dump_path;
+    LOG(WARNING) << "couldn't delete " << info->dump_path;
 
   delete info;
   return 0;
